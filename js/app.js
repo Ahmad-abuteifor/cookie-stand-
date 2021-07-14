@@ -336,7 +336,7 @@ let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pmm', 
 
 
 
-let allshopes=[]
+let allshopes = []
 
 function Shopes(name, min, max, avg,) {
 
@@ -347,12 +347,12 @@ function Shopes(name, min, max, avg,) {
     this.randomCustamers = [];
     this.avergCookiesperHour = [];
     this.total = 0;
-   
+
     allshopes.push(this)
 }
 
 function random(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+    return Math.floor(Math.random() * (max - min + 1)) ;
 }
 
 
@@ -374,14 +374,15 @@ Shopes.prototype.getRandoumCust = function () {
     for (let i = 0; i < 14; i++) {
         newrandom = random(this.minCust, this.maxcust)
         this.randomCustamers.push(newrandom)
+        console.log(newrandom);
     }
 }
 
-seeatle.getRandoumCust();
-Tokyo.getRandoumCust();
-Dubai.getRandoumCust();
-Paris.getRandoumCust();
-Lima.getRandoumCust();
+// seeatle.getRandoumCust();
+// Tokyo.getRandoumCust();
+// Dubai.getRandoumCust();
+// Paris.getRandoumCust();
+// Lima.getRandoumCust();
 
 
 Shopes.prototype.avcalculteCookies = function () {
@@ -398,12 +399,12 @@ Shopes.prototype.avcalculteCookies = function () {
 }
 
 
-seeatle.avcalculteCookies();
+// seeatle.avcalculteCookies();
 
-Tokyo.avcalculteCookies();
-Dubai.avcalculteCookies();
-Paris.avcalculteCookies();
-Lima.avcalculteCookies();
+// Tokyo.avcalculteCookies();
+// Dubai.avcalculteCookies();
+// Paris.avcalculteCookies();
+// Lima.avcalculteCookies();
 
 
 let divElemant = document.getElementById('fishestore');
@@ -438,10 +439,10 @@ function theheader() {
 };
 theheader()
 let tremptyElemant = document.createElement('tr');
-    tableElemant.appendChild(tremptyElemant);
-for (let i = 0; i <=15; i++) {
-    
-    
+tableElemant.appendChild(tremptyElemant);
+for (let i = 0; i <= 15; i++) {
+
+
 
     let tdemptyElemant = document.createElement('td');
     tremptyElemant.appendChild(tdemptyElemant);
@@ -468,31 +469,80 @@ Shopes.prototype.render = function () {
     td2Elemant.textContent = `${this.total}`;
 };
 
-seeatle.render();
-Tokyo.render();
-Dubai.render();
-Paris.render();
-Lima.render();
+// seeatle.render();
+// Tokyo.render();
+// Dubai.render();
+// Paris.render();
+// Lima.render();
+
+
+let form = document.getElementById("form")
+form.addEventListener('submit', makenewshope)
+function makenewshope(event) {
+    event.preventDefault();
+
+    console.log(event);
+
+    let nameloc = event.target.locationName.value;
+    // console.log(nameloc);
+    let minimumcust = event.target.minimum.value;
+
+    let maximumcust = event.target.maximum.value;
+
+    let avecustumpersale = event.target.avergcookie.value;
+
+    console.log(nameloc,minimumcust,maximumcust,avecustumpersale);
+
+    let newshopform = new Shopes(nameloc, minimumcust, maximumcust, avecustumpersale)
+    console.log(newshopform);
+    tr2Elemant.textContent=''
+    newshopform.getRandoumCust();
+
+    newshopform.avcalculteCookies();
+    newshopform.render()
+    FOOTER()
+}
+
+
+// makenewshope(event)
+
+
+
+
+
+
+for (let i = 0; i < allshopes.length; i++) {
+
+    allshopes[i].getRandoumCust();
+    allshopes[i].avcalculteCookies();
+
+    allshopes[i].render();
+}
+
+
+
+
+
+let tr2Elemant = document.createElement('tr');
 
 
 function FOOTER() {
-    let tr2Elemant = document.createElement('tr');
     tableElemant.appendChild(tr2Elemant);
     let td1Elemant = document.createElement('td');
     tr2Elemant.appendChild(td1Elemant);
     td1Elemant.textContent = `total`;
-let totaloftoatl=0
+    let totaloftoatl = 0
     for (let i = 0; i < hours.length; i++) {
-       let total=0
-       
-       for(let j=0;j<allshopes.length;j++){
-             total+=allshopes[j].avergCookiesperHour[i]
-             totaloftoatl+=total
-       }
-       let td2Elemant = document.createElement('td');
-       tr2Elemant.appendChild(td2Elemant);
-       td2Elemant.textContent = total;
-       
+        let total = 0
+
+        for (let j = 0; j < allshopes.length; j++) {
+            total += allshopes[j].avergCookiesperHour[i]
+            totaloftoatl += allshopes[j].avergCookiesperHour[i]
+        }
+        let td2Elemant = document.createElement('td');
+        tr2Elemant.appendChild(td2Elemant);
+        td2Elemant.textContent = total;
+
     }
     let td3Elemant = document.createElement('td');
     tr2Elemant.appendChild(td3Elemant);
@@ -500,3 +550,5 @@ let totaloftoatl=0
 }
 
 FOOTER()
+
+

@@ -1,7 +1,47 @@
+
+body{
+
+  background-color: whitesmoke;
+}
+
 table,tr,td,th{
-  border: 1px solid rgb(223, 25, 25); /*helped from w3shcool*/
+  border: 1px solid rgb(22, 46, 66); /*helped from w3shcool*/
 border-collapse: collapse;
 }
 th,td{
     padding: 15px;
+}
+fieldset{
+width: 50%;
+margin-bottom: 7%;
+margin-left: 15%;
+text-align: center;
+}
+#linkforindx{
+
+  margin: 50px;
+margin-left: 75%;
+
+background-color: black;
+color: white;
+text-decoration: none;
+width: 100px;
+}
+
+#locationName{
+ 
+margin-left: 30px;
+}
+#avergcookie{
+  margin-left: 35px;
+
+}
+main h2{
+  margin-left: 25%;
+}
+
+
+footer{
+  height: 10px;
+  margin: 5%;
 }
