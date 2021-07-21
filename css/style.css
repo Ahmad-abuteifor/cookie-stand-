@@ -1,4 +1,9 @@
 
+*{
+  box-sizing: border-box;
+}
+
+
 body{
 
   background-color: whitesmoke;
@@ -37,11 +42,86 @@ margin-left: 30px;
 
 }
 main h2{
-  margin-left: 25%;
+  /* margin-left: 25%; */
 }
 
 
 footer{
   height: 10px;
   margin: 5%;
+}
+
+header{
+ background-image: url("https://i.pinimg.com/originals/22/55/0d/22550d50bc930e6802d8b65313b49c87.jpg");
+  margin-bottom:2%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  
+}
+header h1{
+  color: #ebf7b8;
+  font-family:fantasy;
+float: right;
+margin-right: 80%;
+}
+  
+#logoimg {
+  width: 9%;
+  height: 7%;
+  float: left;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+header nav p{
+  display: inline-block;
+  margin-left:15%;
+  padding: 1%;
+  /* float:right; */
+color: rgb(15, 15, 14);
+background-color: rgb(143, 230, 236);
+height: 50px;
+width: 100px;
+border-radius: 50%;
+
+}
+header nav p a{
+text-decoration: none;
+color: rgb(22, 22, 21);
+
+
+}
+header nav p a:hover{
+  background-color: blue;
+
+}
+
+main section img{
+  margin-left:25% ;
+  margin-bottom: 2%;
+}
+
+#hoursid{
+  background-color: rgb(111, 238, 206);
+  font-size: 18px;
+  font-family: cursive;
+  padding: 1%;
+  position: absolute;
+  top: 28%;
+}
+main nav {
+  display:inline-block;
+  padding: 10px;
+  /* background-color: cadetblue; */
+  /* float: right; */
+}
+#linefish{
+  background-color: burlywood;
+}
+#linefish nav img{
+  background-color: rgb(39, 37, 35);
+  display: inline-block;
+  height: 5%;
+width: 100px;
+
+
 }
