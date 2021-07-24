@@ -440,15 +440,7 @@ function theheader() {
 theheader()
 let tremptyElemant = document.createElement('tr');
 tableElemant.appendChild(tremptyElemant);
-for (let i = 0; i <= 15; i++) {
 
-
-
-    let tdemptyElemant = document.createElement('td');
-    tremptyElemant.appendChild(tdemptyElemant);
-    tdemptyElemant.textContent = `      `;
-
-}
 
 Shopes.prototype.render = function () {
     let tr2Elemant = document.createElement('tr');

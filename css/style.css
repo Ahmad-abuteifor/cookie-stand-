@@ -6,7 +6,7 @@
 
 body{
 
-  background-color: whitesmoke;
+  background-color: rgb(240, 255, 247)
 }
 
 table,tr,td,th{
@@ -16,19 +16,35 @@ border-collapse: collapse;
 th,td{
     padding: 15px;
 }
+table{
+  margin-left: 10%;
+}
 fieldset{
 width: 50%;
 margin-bottom: 7%;
 margin-left: 15%;
 text-align: center;
 }
+#salemain{
+margin-top: 1%;
+}
+#salemain h2{
+  margin-left: 10%;
+  background-color: rgb(235, 195, 135);;
+  font-family: 'Dancing Script', cursive; ;
+  width: 30%;
+  padding:1%
+
+}
 #linkforindx{
 
   margin: 50px;
 margin-left: 75%;
 
-background-color: black;
-color: white;
+background-color: rgb(235, 195, 135);
+color: black;
+font-family: 'Dancing Script', cursive; ;
+
 text-decoration: none;
 width: 100px;
 }
@@ -57,20 +73,31 @@ header{
   background-repeat: no-repeat;
   background-size: 100% 100%;
   
+  position: fixed;
+ top: 0;
+ width: 100%;
+ margin-bottom:20% ;
 }
+
 header h1{
-  color: #ebf7b8;
-  font-family:fantasy;
+  color: #360f03;
+  font-family: 'Pacifico', cursive;
+
 float: right;
-margin-right: 80%;
+margin-right: 85%;
+margin-bottom: 0;
 }
   
 #logoimg {
-  width: 9%;
-  height: 7%;
+  width: 10%;
+  height: 9%;
   float: left;
   margin-bottom: 1%;
-  margin-top: 1%;
+  margin-left: 3%;
+  margin-top: 0;
+  border:1px;
+  /* border-radius: 50%; */
+
 }
 header nav p{
   display: inline-block;
@@ -78,10 +105,14 @@ header nav p{
   padding: 1%;
   /* float:right; */
 color: rgb(15, 15, 14);
-background-color: rgb(143, 230, 236);
-height: 50px;
-width: 100px;
+background-color: rgb(235, 195, 135);
+margin-left: 13%;
+height: 5%;
+width: 7.5%;
 border-radius: 50%;
+font-family:  'Dancing Script', cursive;
+
+
 
 }
 header nav p a{
@@ -91,26 +122,29 @@ color: rgb(22, 22, 21);
 
 }
 header nav p a:hover{
-  background-color: blue;
+  background-color: rgb(122, 45, 45);
 
 }
-
+main {
+  padding: 16px;
+  margin-top: 12%;}
 main section img{
   margin-left:25% ;
   margin-bottom: 2%;
 }
 
 #hoursid{
-  background-color: rgb(111, 238, 206);
+  background-color: rgb(235, 195, 135);
   font-size: 18px;
-  font-family: cursive;
+  font-family:  'Dancing Script', cursive;
   padding: 1%;
   position: absolute;
   top: 28%;
 }
 main nav {
-  display:inline-block;
-  padding: 10px;
+  /* display:inline-block; */
+  /* padding: 10px;
+  margin-left: 20%; */
   /* background-color: cadetblue; */
   /* float: right; */
 }
@@ -124,4 +158,112 @@ main nav {
 width: 100px;
 
 
+}
+main section p{
+ text-align: center;
+ width: 50%;
+ margin-left: 30%;
+}
+main div h2{
+  background-color: rgb(235, 195, 135);
+  text-align: center;
+width: 50%;
+  margin-left: 30%;
+  font-family:  'Dancing Script', cursive;
+
+}
+main nav h2{
+  text-align: center;
+  background-color:rgb(226, 226, 90);
+  height: 16%;
+}
+#fishback{
+  display: inline-block;
+background-image: url("https://t3.ftcdn.net/jpg/02/83/62/70/360_F_283627076_DoK3nhzJMgUA0YFPKcGrn3PoB6VrrBYv.jpg");
+font-family:'Courier New', Courier, monospace;
+background-repeat: no-repeat;
+background-size: 100% 100%;
+  padding-right: 50%;
+  margin-left: 20%; 
+  font-size: 120%;
+  color: rgb(2, 42, 58);
+  font-weight: bold;
+  
+
+}
+
+.leftshop{
+  /* color: blue; */
+  position: relative;
+  left: 200%;
+  top :145px;
+}
+.centershop{
+  /* color: blueviolet; */
+  margin-bottom: 1px;
+  position: relative;
+  left: 120%;
+  
+}
+.saletext{
+ 
+  position: relative;
+  margin:2px;
+  left: 22%;
+  bottom: 130px; 
+
+
+}
+main :last-child{
+  text-align: center;
+  /* background-color: darkcyan; */
+}
+div h1{
+  background-color: rgb(235, 195, 135);
+  margin-bottom: 5%;
+  margin-top: 7%;
+  width: 60%;
+  margin-left: 25%;
+  font-family:  'Dancing Script', cursive;
+  height: inherit;
+  height: 1%;
+ 
+
+}
+.saletext{
+  font-weight: bold;
+  padding: 2%;
+  display: inline-block;
+  margin-top: 5%;
+  position: relative;
+  left: 4%;
+  margin-right:10%;
+
+}
+button{
+  text-align: center;
+  font-weight: bold;
+  background-color: red;
+  color: white;
+  width: 80%;
+  height: 10%;
+  border-radius: 25px;
+  margin: 1%;
+ 
+}
+#bestprice{
+  width: 90px;
+  margin: 0;
+
+}
+
+main :last-child img{
+  margin: 5%;
+}
+footer{
+  text-align: center;
+
+}
+footer strong{
+  font-family: 'Pacifico', cursive;;
 }
